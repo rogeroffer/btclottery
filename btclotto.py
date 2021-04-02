@@ -378,7 +378,7 @@ if __name__ == '__main__':
   import sys
   #if len(sys.argv) < 2: raise Exception('Usage: python %s IP [PORT]' % sys.argv[0])
   host = '127.0.0.1'
-  port = 4028
+  port = 4031
   if len(sys.argv) == 3:
     port = int(sys.argv[2])
    # Create NeoPixel object with appropriate configuration.
@@ -410,11 +410,11 @@ if __name__ == '__main__':
                   oldblock = block
                   if(FOUND>0):
                           WINCHECK += 'WINNER!\n'
-                          #print(WINCHECK)
+                          print(WINCHECK)
                           winner(strip)
                   elif(FOUND ==0):
                           WINCHECK += 'loser...\n'
-                          #print(WINCHECK)
+                          print(WINCHECK)
                           loser(strip)
                   f = open("winlog.txt", "a")
                   f.write(STATUS_MSG)
